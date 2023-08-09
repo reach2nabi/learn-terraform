@@ -2,12 +2,8 @@ resource "aws_instance" "frontend" {
   ami           = "ami-03265a0778a880afb"
   instance_type = "t3.small"
   pc_security_group_ids = ["sg-0a967863747834191"]
-
-  tags = {
-    Name = "frontend"
-    }
   }
-resource "aws_route53_record" "frontend" {
+resource "aws_instance" "frontend" {
   zone_id = Z0068683HBGQ2JCBDNOY
   name    = "frontend-dev.ndevops.online"
   type    = "NS"
@@ -20,10 +16,7 @@ resource "aws_instance" "mongodb" {
   instance_type = "t3.small"
   pc_security_group_ids = ["sg-0a967863747834191"]
 
-  tags = {
-    Name = "frontend"
   }
-}
 resource "aws_route53_record" "mongodb" {
   zone_id = Z0068683HBGQ2JCBDNOY
   name    = "mongodb-dev.ndevops.online"
@@ -37,10 +30,7 @@ resource "aws_instance" "catalogue" {
   instance_type = "t3.small"
   pc_security_group_ids = ["sg-0a967863747834191"]
 
-  tags = {
-    Name = "frontend"
   }
-}
 resource "aws_route53_record" "catalogue" {
   zone_id = Z0068683HBGQ2JCBDNOY
   name    = "catalogue-dev.ndevops.online"
@@ -54,9 +44,6 @@ resource "aws_instance" "redis" {
   instance_type = "t3.small"
   pc_security_group_ids = ["sg-0a967863747834191"]
 
-  tags = {
-    Name = "frontend"
-  }
 }
 resource "aws_route53_record" "redis" {
   zone_id = Z0068683HBGQ2JCBDNOY
@@ -71,9 +58,6 @@ resource "aws_instance" "user" {
   instance_type = "t3.small"
   pc_security_group_ids = ["sg-0a967863747834191"]
 
-  tags = {
-    Name = "frontend"
-  }
 }
 resource "aws_route53_record" "user" {
   zone_id = Z0068683HBGQ2JCBDNOY
@@ -88,9 +72,7 @@ resource "aws_instance" "cart" {
   instance_type = "t3.small"
   pc_security_group_ids = ["sg-0a967863747834191"]
 
-  tags = {
-    Name = "frontend"
-  }
+
 }
 resource "aws_route53_record" "cart" {
   zone_id = Z0068683HBGQ2JCBDNOY
@@ -105,9 +87,6 @@ resource "aws_instance" "mysql" {
   instance_type = "t3.small"
   pc_security_group_ids = ["sg-0a967863747834191"]
 
-  tags = {
-    Name = "frontend"
-  }
 }
 resource "aws_route53_record" "mysql" {
   zone_id = Z0068683HBGQ2JCBDNOY
@@ -122,9 +101,6 @@ resource "aws_instance" "shipping" {
   instance_type = "t3.small"
   pc_security_group_ids = ["sg-0a967863747834191"]
 
-  tags = {
-    Name = "frontend"
-  }
 }
 resource "aws_route53_record" "shipping" {
   zone_id = Z0068683HBGQ2JCBDNOY
@@ -139,9 +115,6 @@ resource "aws_instance" "rabbitmq" {
   instance_type = "t3.small"
   pc_security_group_ids = ["sg-0a967863747834191"]
 
-  tags = {
-    Name = "frontend"
-  }
 }
 resource "aws_route53_record" "rabbitmq" {
   zone_id = Z0068683HBGQ2JCBDNOY
@@ -156,9 +129,6 @@ resource "aws_instance" "payment" {
   instance_type = "t3.small"
   pc_security_group_ids = ["sg-0a967863747834191"]
 
-  tags = {
-    Name = "frontend"
-  }
 }
 resource "aws_route53_record" "payment" {
   zone_id = Z0068683HBGQ2JCBDNOY
