@@ -35,7 +35,7 @@ resource "aws_route53_record" "mongodb" {
 resource "aws_instance" "catalogue" {
   ami           = "ami-03265a0778a880afb"
   instance_type = "t3.small"
-  vpc_security_group_ids = [sg-0a967863747834191]
+  vpc_security_group_ids = ["sg-0a967863747834191"]
 
   tags = {
     Name = "catalogue"
