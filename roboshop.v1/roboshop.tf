@@ -8,7 +8,7 @@ resource "aws_route53_record" "frontend" {
   name    = "frontend-dev.ndevops.online"
   type    = "NS"
   ttl     = "30"
-  records = ["aws_instance.frontend.private_ip"]
+  records = [aws_instance.frontend.private_ip]
 }
 
 resource "aws_instance" "mongodb" {
@@ -22,7 +22,7 @@ resource "aws_route53_record" "mongodb" {
   name    = "mongodb-dev.ndevops.online"
   type    = "NS"
   ttl     = "30"
-  records = ["aws_instance.mongodb.private_ip"]
+  records = [aws_instance.mongodb.private_ip]
 }
 
 resource "aws_instance" "catalogue" {
@@ -36,7 +36,7 @@ resource "aws_route53_record" "catalogue" {
   name    = "catalogue-dev.ndevops.online"
   type    = "NS"
   ttl     = "30"
-  records = ["aws_instance.catalogue.private_ip"]
+  records = [aws_instance.catalogue.private_ip]
 }
 
 resource "aws_instance" "redis" {
@@ -50,7 +50,7 @@ resource "aws_route53_record" "redis" {
   name    = "redis-dev.ndevops.online"
   type    = "NS"
   ttl     = "30"
-  records = ["aws_instance.redis.private_ip"]
+  records = [aws_instance.redis.private_ip]
 }
 
 resource "aws_instance" "user" {
@@ -64,7 +64,7 @@ resource "aws_route53_record" "user" {
   name    = "user-dev.ndevops.online"
   type    = "NS"
   ttl     = "30"
-  records = ["aws_instance.user.private_ip"]
+  records = [aws_instance.user.private_ip]
 }
 
 resource "aws_instance" "cart" {
@@ -79,7 +79,7 @@ resource "aws_route53_record" "cart" {
   name    = "cart-dev.ndevops.online"
   type    = "NS"
   ttl     = "30"
-  records = ["aws_instance.cart.private_ip"]
+  records = [aws_instance.cart.private_ip]
 }
 
 resource "aws_instance" "mysql" {
@@ -93,7 +93,7 @@ resource "aws_route53_record" "mysql" {
   name    = "mysql-dev.ndevops.online"
   type    = "NS"
   ttl     = "30"
-  records = ["aws_instance.mysql.private_ip"]
+  records = [aws_instance.mysql.private_ip]
 }
 
 resource "aws_instance" "shipping" {
@@ -107,7 +107,7 @@ resource "aws_route53_record" "shipping" {
   name    = "shipping-dev.ndevops.online"
   type    = "NS"
   ttl     = "30"
-  records = ["aws_instance.shipping.private_ip"]
+  records = [aws_instance.shipping.private_ip]
 }
 
 resource "aws_instance" "rabbitmq" {
@@ -121,7 +121,7 @@ resource "aws_route53_record" "rabbitmq" {
   name    = "rabbitmq-dev.ndevops.online"
   type    = "NS"
   ttl     = "30"
-  records = ["aws_instance.rabbitmq.private_ip"]
+  records = [aws_instance.rabbitmq.private_ip]
 }
 
 resource "aws_instance" "payment" {
@@ -135,5 +135,5 @@ resource "aws_route53_record" "payment" {
   name    = "payment-dev.ndevops.online"
   type    = "NS"
   ttl     = "30"
-  records = ["aws_instance.payment.private_ip"]
+  records = [aws_instance.payment.private_ip]
 }
