@@ -3,7 +3,7 @@ resource "aws_instance" "frontend" {
   instance_type = "t3.small"
   pc_security_group_ids = ["sg-0a967863747834191"]
   }
-resource "aws_instance" "frontend" {
+resource "aws_route53_record" "frontend" {
   zone_id = Z0068683HBGQ2JCBDNOY
   name    = "frontend-dev.ndevops.online"
   type    = "NS"
