@@ -18,7 +18,7 @@ variable "components" {
     mongodb = {name="mongodb-dev"}
     catalogue= {name="catalogue-dev"}
     redis= {name="redis-dev"}
-    user= {user="catalogue-dev"}
+    user= {name="user-dev"}
     cart= {name="cart-dev"}
     mysql= {name="mysql-dev"}
     shipping= {name="shipping-dev"}
