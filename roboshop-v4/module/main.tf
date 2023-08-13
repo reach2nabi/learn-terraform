@@ -9,7 +9,7 @@ resource "aws_instance" "instance" {
 }
 resource "aws_route53_record" "records" {
   zone_id = var.zone_id
-  name    = "${var.name}.ndevops.online"
+  name    = "${var.name}-dev.ndevops.online"
   type    = "A"
   ttl     =  30
   records = [aws_instance.instance.private_ip]
@@ -26,7 +26,7 @@ resource "null_resource" "ansible" {
  cd /home/centos/roboshop-ansible-roles
  git pull
  sleep 30
- ansible-playbook -i ${var.name}.ndevops.online main.yml -e centos_user=centos -e centos_password=DevOps321 -e component_name=${var.name}
+ ansible-playbook -i ${var.name}-dev.ndevops.online, main.yml -e ansible_user=centos -e ansible_password=DevOps321 -e component_name=${var.name}
  EOF
   }
 }
